@@ -93,16 +93,16 @@ fun SplashScreenContent(
     }
 
     LaunchedEffect(Unit) {
-        viewModel.restGetAPI()
+        //viewModel.restGetAPI()
         delay(500)
         isStart = true
-        /*delay(4000)
+        delay(4000)
         navController.navigate(ScreenSignIn) {
             popUpTo(ScreenSplash) {
                 inclusive = true
             }
 
-        }*/
+        }
     }
 
     LaunchedEffect(Unit) {

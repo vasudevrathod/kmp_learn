@@ -48,7 +48,7 @@ fun createHttpClient(engine: HttpClientEngine): HttpClient {
         }
 
         defaultRequest {
-            url("https://dev.shoppinggate.app/api/v5/")
+            url("https://dev.test.app/api/v5/")
             header(HttpHeaders.ContentType, ContentType.Application.Json)
             header(KtorUtility.ApiHeaderKey.KEY, KtorUtility.ApiHeaderValue.KEY_VALUE)
         }

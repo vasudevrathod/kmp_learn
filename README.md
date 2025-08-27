@@ -23,6 +23,35 @@ Imagine our app has:
 ---
 
 ### Project Overview
+SufarCab is a ride-hailing application developed using Kotlin Multiplatform (KMP), designed to deliver a smooth experience similar to Uber.  
+It provides a robust user flow starting from authentication to booking, payments, and trip history management.
+
+### 🚀 Features:
+- 📱 **Authentication**
+  - Login with mobile number or email
+  - OTP-based verification for secure access
+
+- 🏠 **Home Screen**
+  - Quick access to nearby cabs and services
+
+- 🛠 **Service Screen**
+  - Explore different cab and service options
+
+- 👤 **Profile Management**
+  - View and edit user profile
+  - Manage account settings
+
+- 💳 **Wallet & Payments**
+  - In-app wallet for easy balance management
+  - Multiple payment methods supported
+
+- 📜 **Trip History**
+  - View past rides and payment details
+
+- ✏️ **Edit Profile**
+  - Update personal information anytime
+
+#### Screen Shots
 | ![ScreenShot 1](https://github.com/vasudevrathod/kmp_learn/blob/wolfinfinity/githubAssets/ss_1.png) | ![ScreenShot 2](https://github.com/vasudevrathod/kmp_learn/blob/wolfinfinity/githubAssets/ss_2.png) | ![ScreenShot 3](https://github.com/vasudevrathod/kmp_learn/blob/wolfinfinity/githubAssets/ss_3.png) | ![ScreenShot 4](https://github.com/vasudevrathod/kmp_learn/blob/wolfinfinity/githubAssets/ss_4.png) |
 | ---------------------------------------------------|----------------------------------------------------------|---------------------------------------------------|----------------------------------------------------------|
 

@@ -1,0 +1,93 @@
+[versions]
+agp = "8.10.1"
+android-compileSdk = "36"
+android-minSdk = "29"
+android-targetSdk = "36"
+androidx-activity = "1.10.1"
+androidx-appcompat = "1.7.1"
+androidx-constraintlayout = "2.2.1"
+androidx-core = "1.16.0"
+androidx-espresso = "3.6.1"
+androidx-lifecycle = "2.9.1"
+androidx-testExt = "1.2.1"
+composeMultiplatform = "1.8.2" # "1.8.1"
+junit = "4.13.2"
+kotlin = "2.2.0" # "2.1.21"
+ktorClientSerialization = "3.2.2" # "1.5.0"
+navigationCompose = "2.9.0-beta04" # "2.9.0-beta01"
+hiltAndroid = "2.56"
+hiltAndroidCompiler = "2.56"
+googleKsp = "2.1.21-2.0.27"
+compose-plugin-resources = "1.6.10"
+composeViewmodel = "2.9.1"
+composeGraphic = "1.6.0"
+dataStore = "1.1.7"
+dataStorePreference = "1.1.7"
+ktor = "3.2.2"
+playServicesMaps = "19.2.0"
+googleMapCompose = "4.3.3"
+googlePlayService = "4.4.3"
+kotlinx-datetime = "0.7.1"
+
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+junit = { module = "junit:junit", version.ref = "junit" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
+androidx-testExt-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-testExt" }
+androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-espresso" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidx-constraintlayout" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
+androidx-lifecycle-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+androidx-compose-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "composeViewmodel"}
+
+# Navigation
+ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktorClientSerialization" }
+androidx-navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+
+# Dagger Hilt
+dagger-hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+
+# Data Store
+data-store = {module = "androidx.datastore:datastore", version.ref = "dataStore"}
+data-store-preferences = {module = "androidx.datastore:datastore-preferences", version.ref = "dataStorePreference"}
+
+# Ktor - API calling // https://ktor.io/docs/client-create-multiplatform-application.html
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" } # Android
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" } # iOS
+ktor-client-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+
+# Google Map Load
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+google-maps-compose = { group = "com.google.maps.android", name = "maps-compose", version.ref = "googleMapCompose" }
+
+# Kotlin Date & Time
+kotlin-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime"}
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-serialization = {id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
+google-ksp = {id = "com.google.devtools.ksp", version.ref = "googleKsp"}
+gsm-google-services = { id = "com.google.gms.google-services", version.ref = "googlePlayService" }
+
+[bundles]
+ktor = [
+    "ktor-client-core",
+    "ktor-client-negotiation",
+    "ktor-serialization-json",
+    "ktor-client-logging"
+]
+googleMap = [
+    "play-services-maps",
+    "google-maps-compose"
+]
